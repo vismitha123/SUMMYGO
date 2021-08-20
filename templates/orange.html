@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+ /* CSS FOR FOOTER
+     */
+     body {
+    background: #D0D8DB;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+textarea {
+    resize: none;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+
+
+.svg-inline--fa {
+  vertical-align: -0.200em;
+}
+
+.rounded-social-buttons {
+  text-align: center;
+}
+
+.rounded-social-buttons .social-button {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  width: 3.125rem;
+  height: 3.125rem;
+  border: 0.125rem solid transparent;
+  padding: 0;
+  text-decoration: none;
+  text-align: center;
+  color: #fefefe;
+  font-size: 1.5625rem;
+  font-weight: normal;
+  line-height: 2em;
+  border-radius: 1.6875rem;
+  transition: all 0.5s ease;
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus {
+  -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.rounded-social-buttons .fa-twitter, .fa-facebook-f, .fa-linkedin, .fa-youtube, .fa-instagram {
+  font-size: 25px;
+}
+
+.rounded-social-buttons .social-button.facebook {
+  background: #3b5998;
+}
+
+.rounded-social-buttons .social-button.facebook:hover, .rounded-social-buttons .social-button.facebook:focus {
+  color: #3b5998;
+  background: #fefefe;
+  border-color: #3b5998;
+}
+
+.rounded-social-buttons .social-button.twitter {
+  background: #55acee;
+}
+
+.rounded-social-buttons .social-button.twitter:hover, .rounded-social-buttons .social-button.twitter:focus {
+  color: #55acee;
+  background: #fefefe;
+  border-color: #55acee;
+}
+
+.rounded-social-buttons .social-button.linkedin {
+  background: #007bb5;
+}
+
+.rounded-social-buttons .social-button.linkedin:hover, .rounded-social-buttons .social-button.linkedin:focus {
+  color: #007bb5;
+  background: #fefefe;
+  border-color: #007bb5;
+}
+
+.rounded-social-buttons .social-button.youtube {
+  background: #bb0000;
+}
+
+.rounded-social-buttons .social-button.youtube:hover, .rounded-social-buttons .social-button.youtube:focus {
+  color: #bb0000;
+  background: #fefefe;
+  border-color: #bb0000;
+}
+
+.rounded-social-buttons .social-button.instagram {
+  background: #125688;
+}
+
+.rounded-social-buttons .social-button.instagram:hover, .rounded-social-buttons .social-button.instagram:focus {
+  color: #125688;
+  background: #fefefe;
+  border-color: #125688;
+}
+
+    /* CSS FOR NAVBAR BEGINGS HERE */
+    * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-family: 'segoe ui';
+
+
+}
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: #4682b4;
+  position: relative;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+
+  border:2px solid orange;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+    /* CSS FOR NAVBAR BEGINGS HERE */
+    * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-family: 'segoe ui';
+  background-color: #bdd4e7;
+background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
+
+ /* background-color: #36096d; */
+/* background-image: linear-gradient(315deg, #36096d 0%, #37d5d6 74%); blue blue*/
+
+
+}
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color:palegoldenrod;
+  position: relative;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color:rgb(105,105,105);
+}
+
+.nav > .nav-links > a:hover {
+  background-color: whitesmoke;
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+/*CSS FOR NAVBAR ENDS HERE*/
+        html, body {
+      min-height: 100%;
+      }
+      body, div, form, input, select, p {
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px;
+      color: #666;
+      line-height: 22px;
+      }
+      h1 {
+      position: absolute;
+      margin: 0;
+      font-size: 36px;
+      color: #fff;
+      z-index: 2;
+      }
+      span.required {
+      color: red;
+      }
+      .testbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: inherit;
+      padding: 20px;
+      }
+      form {
+      width: 100%;
+      padding: 20px;
+      border-radius: 6px;
+      background: #fff;
+      box-shadow: 0 0 30px 0 #095484;
+      }
+      .banner {
+      position: relative;
+      height: 80px;
+      background-image: url("https://liveatnolan.com/wp-content/uploads/2018/09/OrangeTexture.jpg");
+     background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      }
+      .banner::after {
+      content: "";
+      background-color: rgba(0, 0, 0, 0.4);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      }
+      p.top-info {
+      margin: 10px 0;
+      }
+      input, select {
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      }
+      input {
+      width: calc(100% - 10px);
+      padding: 5px;
+      }
+      select {
+      width: 100%;
+      padding: 7px 0;
+      background: transparent;
+      }
+      .item:hover p, .question:hover p, .question label:hover, input:hover::placeholder {
+      color: #095484;
+      }
+      .item input:hover, .item select:hover {
+      border: 1px solid transparent;
+      box-shadow: 0 0 5px 0 #095484;
+      color: #095484;
+      }
+      .item {
+      position: relative;
+      margin: 10px 0;
+      }
+      .question input {
+      width: auto;
+      margin: 0;
+      border-radius: 50%;
+      }
+      .question input, .question span {
+      vertical-align: middle;
+      }
+      .question label {
+      display: inline-block;
+      margin: 5px 20px 15px 0;
+      }
+      .btn-block {
+      margin-top: 10px;
+      text-align: center;
+      }
+      button {
+      width: 150px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background: #FFF;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+      }
+      button:hover {
+      background:orangered;
+      }
+      @media (min-width: 568px) {
+      .name-item, .city-item {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      }
+      .name-item input, .city-item input {
+      width: calc(50% - 20px);
+      }
+      .city-item select {
+      width: calc(50% - 8px);
+      }
+      }
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+</head>
+<body style=" background-color: #faa499;
+background-image: linear-gradient(319deg, #faa499 0%, #f7dd85 37%, #ffc55c 100%);
+">
+
+
+    <div class="nav">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+          <div class="nav-title"  style="color:rgb(105,105,105)">
+            SUMMY GO
+          </div>
+        </div>
+        <div class="nav-btn">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+
+        <div class="nav-links" >
+          <a href="#logo">Logo</a>
+          <a href="#themes" >Themes</a>
+          <a href="#input" >Input </a>
+          <a href="#ourteam">Our Team</a>
+          <a href="#contactus" >Contact Us</a>
+        </div>
+      </div>
+
+      <div class="w3-display-container w3-animate-opacity" >
+        <img src="/static/OrangeTexture.jpg" alt="boat" style="width:100%;min-height:250px;max-height:380px;">
+        <div class="w3-container w3-display-bottomleft w3-margin-bottom">
+            <img src="/static/summy.png" style="max-height:250px; min-height:180px; width:280x;"></img>
+        </div>
+      </div>
+
+    <div        class="w3-display-container w3-animate-opacity" style="height: 200px;width:100%" >
+        <br><br><p> <h3 style="text-align: center;color: rgb(105,105,105);"><B>INPUT YOUR FILE , CHOOSE FROM EXISTING THEMES , GET YOUR PRESENTATION!</B></h3></p>
+      </div>
+
+
+
+
+
+
+
+<div id="themes" class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 12</div>
+  <img src="/static/Celestial-G.JPG" style="width:100%">
+  <div class="text">Celestial G</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 12</div>
+  <img src="/static/Berlin.JPG" style="width:100%">
+  <div class="text">Berlin</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 12</div>
+  <img src="/static/Circuit.JPG" style="width:100%">
+  <div class="text">Circuit</div>
+</div>
+
+<div class="mySlides fade">
+    <div class="numbertext">4 / 12</div>
+    <img src="/static/Company.JPG" style="width:100%">
+    <div class="text">Company</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">5 / 12</div>
+    <img src="/static/Tech Presentation.JPG" style="width:100%">
+    <div class="text">Tech Presentation</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">6 / 12</div>
+    <img src="/static/Ion Boardroom.jpg" style="width:100%">
+    <div class="text">Ion Boardroom</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">7 / 12</div>
+    <img src="/static/Celestial.JPG" style="width:100%">
+    <div class="text">Celestial</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">8 / 12</div>
+    <img src="/static/Outdoors.JPG" style="width:100%">
+    <div class="text">Outdoors</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">9 / 12</div>
+    <img src="/static/Event Design.jpg"style="width:100%">
+    <div class="text">Event Design</div>
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">10 / 12</div>
+    <img src="/static/Geometric.JPG" style="width:100%">
+    <div class="text">Geometric</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">11 / 12</div>
+    <img src="/static/Pitch.JPG"  style="width:100%">
+    <div class="text">Pitch</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">12 / 12</div>
+    <img src="/static/Crop Design.jpg"style="width:100%">
+    <div class="text">Crop Design</div>
+  </div>
+
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+<div id="input" class="testbox">
+    <form action="." method='POST' enctype="multipart/form-data"> {% csrf_token %}
+      <div class="banner">
+        <h1><b>GET YOUR PRESENTATION NOW</b></h1>
+      </div>
+
+      <div class="item">
+        <p>Type of Input file<span class="required">*</span></p>
+        <div class="name-item">
+          <select id="filetype" name="filetype">
+
+              <option value="txt" name=".txt">.txt</option>
+              <option value="pdf" name=".pdf">.pdf</option>
+              <option value="docx" name=".docx">.docx</option>
+
+            </select>
+        </div>
+      </div>
+
+
+
+      <p>The Uploaded file extension is: <span class="output"></span></p>
+      <script language="javascript">
+        function checkFileExtension() {
+            fileName = document.querySelector('#myfile').value;
+            extension = fileName.split('.').pop();
+            document.querySelector('.output')
+                                     .textContent = extension;
+            filetype = document.querySelector('#iptype').value;
+            if(filetype!=extension)
+            {
+                alert('File type does not match !!');
+                document.querySelector('#myfile').value='';
+                document.querySelector('.output')
+                                     .textContent = '';
+
+            }
+
+
+        };
+    </script>
+
+      <div class="item">
+        <p>No. of sentences per slide<span class="required">*</span></p>
+        <input type="number" id="noofslides" name="noofslides" min="1" max="4">
+      </div>
+
+      <div class="item">
+        <p>Choose Theme<span class="required">*</span></p>
+
+          <select id="presentation" name="presentation">
+
+            <option value="Celestial-G.pptx">Celestial G</option>
+            <option value="Berlin.pptx">Berlin</option>
+            <option value="Circuit.pptx">Circuit</option>
+            <option value="Ion Boardroom.pptx">Ion Boardroom</option>
+            <option value="Celestial.pptx">Celestial</option>
+            <option value="Outdoors.pptx">Outdoors</option>
+            <option value="Event Design.pptx">Event Design</option>
+            <option value="Geometric.pptx">Geometric</option>
+            <option value="PITCH.pptx">Pitch</option>
+
+            <option value="Crop Design.pptx">Crop Design</option>
+          </select>
+        </div>
+        <div class="item">
+          <p>Select Output Type<span class="required">*</span></p>
+
+            <select id="optype" name="optype">
+
+              <option  value="ppt">.pptx</option>
+              <option value="pdf">.pdf</option>
+
+            </select>
+
+          </div>
+
+          <h4>{{title}}<h4>
+
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="SUBMIT">
+
+{% include 'messages.html' %}
+      </div>
+
+
+
+
+    </form>
+
+    <div class="btn-block">
+      <form action='/download/' method='POST'>
+      {% csrf_token %}
+      <input type="submit" value="DOWNLOAD OUTPUT">
+      </form>
+    </form>
+
+
+
+
+
+
+
+
+  <div id="ourteam" class="w3-container w3-padding-64 w3-center" id="team" style="color:rgb(105,105,105);font-weight:bold">
+    <h2 style="font-weight: bold;" >OUR TEAM</h2>
+
+
+    <div class="w3-row"><br>
+
+      <div class="w3-quarter">
+        <img src="/static/chai.JPEG" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+        <p >CHAITANYA S M</p>
+      </div>
+
+    <div class="w3-quarter">
+      <img src="/static/sanj.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+      <p >SANJANA R K</p>
+
+    </div>
+
+
+
+    <div class="w3-quarter">
+      <img src="/static/vis.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+      <p >VISMITHA N V</p>
+
+    </div>
+
+    <div class="w3-quarter">
+      <img src="/static/sun.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+      <p>SUNIDHI A G</p>
+
+    </div>
+
+    </div>
+    </div>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+
+<footer>
+  <div id="contactus" class="rounded-social-buttons">
+                    <a class="social-button facebook" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="social-button twitter" href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a class="social-button linkedin" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a class="social-button youtube" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a class="social-button instagram" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+</footer>
+
+</body>
+</html>
